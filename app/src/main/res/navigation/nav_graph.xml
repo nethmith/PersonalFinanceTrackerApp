@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.personalfinancetrackerapp.ui.home.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_home_to_add_transaction"
+            app:destination="@id/navigation_add_transaction" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_transactions"
+        android:name="com.example.personalfinancetrackerapp.ui.transactions.TransactionsFragment"
+        android:label="Transactions">
+        <action
+            android:id="@+id/action_transactions_to_add_transaction"
+            app:destination="@id/navigation_add_transaction" />
+    </fragment>
+
+    <activity
+        android:id="@+id/navigation_analytics"
+        android:name="com.example.personalfinancetrackerapp.ui.analytics.AnalyticsActivity"
+        android:label="Analytics" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.personalfinancetrackerapp.ui.settings.SettingsFragment"
+        android:label="Settings" />
+
+    <fragment
+        android:id="@+id/navigation_add_transaction"
+        android:name="com.example.personalfinancetrackerapp.ui.transactions.AddTransactionFragment"
+        android:label="Add Transaction" />
+
+</navigation> 
